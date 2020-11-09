@@ -1,15 +1,11 @@
-!apt-get install texlive texlive-xetex texlive-latex-extra pandoc
-!pip install pypandoc
-!jupyter nbconvert --to PDF drive/My\ Drive/Colab\ Notebooks/"k_NN.ipynb"
-
 import numpy as np
 import pandas as pd
 import operator, time
 from matplotlib import pyplot as plt
 from collections import Counter
 
-from google.colab import drive
-drive.mount('/content/drive')
+#from google.colab import drive
+#drive.mount('/content/drive')
 
 path_to_train = '/content/drive/My Drive/zip.train'
 path_to_test = '/content/drive/My Drive/zip.test'
@@ -102,9 +98,7 @@ class KNearestNeighbors():
             f and self.plotter(k, t, 'k', 'runtime [s]')
         self.wrong_number(acc[1], train)                                            #[BUG] Pictures are generated after every main-method call is executed
 
+#This kNN-Algorithm only accepts k = [a,b,...], where every testset will be tested
+#based on the values in k. (Example is down below for k = [1,2,...199])
 kNN = KNearestNeighbors()
 kNN.main_method(list(range(1,200)))
-print("-----------------------------------------")
-kNN.main_method([1])  
-print("-----------------------------------------")
-kNN.main_method([3,6], X_train, X_test, 1)
