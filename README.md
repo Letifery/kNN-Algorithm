@@ -1,4 +1,4 @@
-# kNN-Algorithm-v0.9.0
+# kNN-Algorithm-v1.0.0
 
 Just my implementation of the kNN-Algorithm. The task was to implement said algorithm to automatically detect and translate 16x16 numerical images to their corresponding values, plot the runtime/accuracy of the algorithm with respect to the used k hyperparameter and to make it somewhat efficient.
 
